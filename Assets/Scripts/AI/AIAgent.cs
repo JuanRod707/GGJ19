@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using Effects;
-using Helpers;
 using Movement;
 using Repositories;
 using UnityEngine;
@@ -13,6 +12,7 @@ namespace AI
         public float MaxIdleTime;
         public ScheduledNavigator Navigator;
         public VfxPlay SpookVfx;
+        public Animator Controller;
 
         private TransformRepository navigationSpots;
         
@@ -24,13 +24,18 @@ namespace AI
             NavigateTo(navigationSpots.GetRandomSpot.position);
         }
 
-        private void NavigateTo(Vector3 position) => Navigator.MoveTo(position, WaitInPlace);
+        private void NavigateTo(Vector3 position)
+        {
+            Controller.SetTrigger("Walk");
+            Navigator.MoveTo(position, WaitInPlace);
+        }
 
         void WaitInPlace() => StartCoroutine(WaitThenMove());
-
+        
         IEnumerator WaitThenMove()
         {
             Navigator.Stop();
+            Controller.SetTrigger("Stop");
             yield return new WaitForSeconds(RandomWaitTime);
             NavigateTo(navigationSpots.GetRandomSpot.position);
         }
@@ -38,6 +43,7 @@ namespace AI
         public void Spook()
         {
             SpookVfx.PlayVfx();
+            Controller.SetTrigger("Run");
             Navigator.RunTo(navigationSpots.GetFurthest(transform.position).position, WaitInPlace);
         }
     }

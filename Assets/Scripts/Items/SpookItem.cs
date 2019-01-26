@@ -32,9 +32,7 @@ namespace Items
         private void SpookNPCs(IEnumerable<AIAgent> npcs)
         {
             foreach (var npc in npcs)
-            {
                 npc.Spook();
-            }
         }
     }
 }
