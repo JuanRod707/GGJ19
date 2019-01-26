@@ -9,7 +9,6 @@ namespace Effects
         public float FlickInterlude;
         public int FlickAmount;
         public Light Light;
-        public AudioSource Sfx;
 
         private float basicRange;
 
@@ -17,7 +16,6 @@ namespace Effects
         {
             basicRange = Light.range;
             StartCoroutine(Flick());
-            Sfx?.Play();
         }
 
         IEnumerator Flick()
