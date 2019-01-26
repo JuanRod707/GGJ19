@@ -154,7 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationRange: 6
   EffectRange: 12
-  Effect: {fileID: 7811176453371502847}
+  Effects:
+  - {fileID: 7811176453371502847}
 --- !u!1 &3823584937204678917
 GameObject:
   m_ObjectHideFlags: 0
