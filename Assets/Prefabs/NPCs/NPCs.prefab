@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 7663974703778163093}
   - component: {fileID: 7663974703778163094}
   m_Layer: 0
-  m_Name: Generator
+  m_Name: NPCGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,10 +73,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f969146864410f04cabfd578ef531847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCPrefabs:
+  InvaderPrefabs:
   - {fileID: 4489534411262261394, guid: 1763a8dd8effeda4e9f2b57a4d238d48, type: 3}
-  FamilyNpcSpawnPoints: []
+  - {fileID: 301999066072689025, guid: 57ac594a987d77546a68d5619aae5192, type: 3}
+  - {fileID: 2025309582458094200, guid: aa66ec67e97fb4c4da7e500bce86bb01, type: 3}
+  FamilyPrefabs:
+  - {fileID: 2025309582458094200, guid: ed8e91c02a70139448d0739846242f9e, type: 3}
+  - {fileID: 301999066072689025, guid: aa67fdbe53799de41a18a377dd76e4e7, type: 3}
+  - {fileID: 4489534411262261394, guid: 6cfcdfe06601e2a428da904e9a464962, type: 3}
+  FamilyNpcSpawnPoints: {fileID: 0}
   InvaderSpawnPoint: {fileID: 0}
+  ActorRepository: {fileID: 1865547347}
   NavigationSpots: {fileID: 0}
   NPCContainer: {fileID: 7663974702831890184}
 --- !u!1 &7663974704808676348
@@ -88,6 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7663974704808676349}
+  - component: {fileID: 1865547347}
   m_Layer: 0
   m_Name: NPCs
   m_TagString: Untagged
@@ -112,6 +120,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1865547347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663974704808676348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4abd664d2a4cc6bc07ab3c6ab436e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerGhost: {fileID: 4138698031164610878}
 --- !u!1001 &743360385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,16 +202,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4138698030429904574, guid: b847205c0cf5e244982fbeb35010addf,
         type: 3}
-      propertyPath: m_WalkableMask
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4138698030429904574, guid: b847205c0cf5e244982fbeb35010addf,
-        type: 3}
       propertyPath: m_AutoRepath
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b847205c0cf5e244982fbeb35010addf, type: 3}
+--- !u!1 &4138698031164610878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4138698030429904575, guid: b847205c0cf5e244982fbeb35010addf,
+    type: 3}
+  m_PrefabInstance: {fileID: 743360385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4138698031164610872 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4138698030429904569, guid: b847205c0cf5e244982fbeb35010addf,

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FamilyBlack
+  m_Name: LocalBlack
   m_Shader: {fileID: 4800000, guid: 46ebb4b3352f4934187a8d20fe75e180, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
