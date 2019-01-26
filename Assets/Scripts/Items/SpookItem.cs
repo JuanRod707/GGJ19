@@ -10,6 +10,7 @@ namespace Items
     {
         public float ActivationRange;
         public float EffectRange;
+        public float Cooldown;
         public SpookEffect[] Effects;
 
         private ActorRepository actors;
