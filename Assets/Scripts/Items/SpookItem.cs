@@ -10,7 +10,7 @@ namespace Items
     {
         public float ActivationRange;
         public float EffectRange;
-        public VisualEffect Vfx;
+        public SpookEffect Effect;
 
         private ActorRepository actors;
 
@@ -24,7 +24,7 @@ namespace Items
             if (GhostIsInRange)
             {
                 SpookNPCs(actors.GetNPCsInRadius(transform.position, EffectRange));
-                Vfx.PlayEffect();
+                Effect.PlayEffect();
             }
         }
 

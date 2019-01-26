@@ -2,7 +2,7 @@
 
 namespace Effects
 {
-    public abstract class VisualEffect : MonoBehaviour
+    public abstract class SpookEffect : MonoBehaviour
     {
         public virtual void PlayEffect() { }
     }

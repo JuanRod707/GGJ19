@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Effects
 {
-    public class FlickLight : VisualEffect
+    public class FlickLight : SpookEffect
     {
         public float FlickInterlude;
         public int FlickAmount;
