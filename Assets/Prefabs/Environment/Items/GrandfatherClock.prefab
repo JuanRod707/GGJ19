@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivationRange: 5
   EffectRange: 7
-  Cooldown: 10
+  Cooldown: 15
   Effects:
   - {fileID: 7811176453371502847}
   Auras: {fileID: 2573569457246428989}

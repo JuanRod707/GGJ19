@@ -297,8 +297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationRange: 4
-  EffectRange: 5
-  Cooldown: 10
+  EffectRange: 3
+  Cooldown: 8
   Effects:
   - {fileID: 6086944518641654368}
   Auras: {fileID: 7224734518859681277}

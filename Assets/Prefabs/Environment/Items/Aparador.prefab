@@ -231,8 +231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationRange: 5
-  EffectRange: 6
-  Cooldown: 5
+  EffectRange: 3
+  Cooldown: 8
   Effects:
   - {fileID: 6455181913314708206}
   - {fileID: 2977852774688079236}
