@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using UI;
+using UnityEngine;
 
 namespace Player
 {
     public class GameProgress : MonoBehaviour
     {
+        public InGamePanels UiController;
+
         private int spookedVisitors;
         private int visitorCount;
 
@@ -12,18 +15,13 @@ namespace Player
         public void VisitorSpooked()
         {
             spookedVisitors++;
+            UiController.AddScore();
             if (spookedVisitors >= visitorCount)
                 WinGame();
         }
 
-        public void LocalSpooked()
-        {
-            Debug.Log("you suck");
-        }
+        public void LocalSpooked() => UiController.GameEnded("You Lose");
 
-        private void WinGame()
-        {
-            Debug.Log("you are winrar");
-        }
+        private void WinGame() => UiController.GameEnded("You Win");
     }
 }
