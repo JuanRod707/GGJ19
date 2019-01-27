@@ -183,6 +183,7 @@ MonoBehaviour:
   Navigator: {fileID: 4984184422651935005}
   SpookVfx: {fileID: 4843649570030978685}
   Controller: {fileID: 8134669411663779691}
+  SpookPoints: 3
 --- !u!1001 &5963281003830673581
 PrefabInstance:
   m_ObjectHideFlags: 0

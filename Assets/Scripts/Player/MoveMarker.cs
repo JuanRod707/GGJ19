@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace PlayerInput
+namespace Player
 {
     public class MoveMarker : MonoBehaviour
     {

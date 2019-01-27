@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e7a06e2f190a174a909191e61c25577
+guid: 8d78d780880090449b61bfdc28cf3b22
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -168,7 +168,7 @@ ModelImporter:
     4300010: personaje05zapatoIZQ_geo
     4300012: lentes_geo
     4300014: cruz_geo
-    7400000: cura_camina
+    7400000: cura_idle
     9500000: //RootNode
     13700000: cruz_geo
     13700002: lentes_geo
@@ -205,35 +205,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: cura_camina
-      takeName: cura_camina
-      firstFrame: 1
-      lastFrame: 23
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

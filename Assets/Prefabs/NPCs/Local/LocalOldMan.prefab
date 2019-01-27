@@ -151,6 +151,8 @@ MonoBehaviour:
   Navigator: {fileID: 9175393874013251598}
   SpookVfx: {fileID: 2107818058607977131}
   Controller: {fileID: 377398329808809469}
+  SpookPoints: 1
+  IsLocal: 1
 --- !u!1 &9191654103726513815
 GameObject:
   m_ObjectHideFlags: 0

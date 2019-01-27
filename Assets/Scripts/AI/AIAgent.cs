@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Effects;
 using Movement;
+using Player;
 using Repositories;
 using UnityEngine;
 
@@ -13,26 +14,31 @@ namespace AI
         public ScheduledNavigator Navigator;
         public VfxPlay SpookVfx;
         public Animator Controller;
+        public int SpookPoints;
+        public bool IsLocal;
 
-        private TransformRepository navigationSpots;
-        
-        private float RandomWaitTime => Random.Range(MinIdleTime, MaxIdleTime);
+        protected TransformRepository navigationSpots;
+        protected Transform outside;
+        protected float RandomWaitTime => Random.Range(MinIdleTime, MaxIdleTime);
+        protected GameProgress game;
 
-        public void Initialize(TransformRepository navigationSpots)
+        public void Initialize(GameProgress game, TransformRepository navigationSpots, Transform outside)
         {
             this.navigationSpots = navigationSpots;
             NavigateTo(navigationSpots.GetRandomSpot.position);
+            this.outside = outside;
+            this.game = game;
         }
 
-        private void NavigateTo(Vector3 position)
+        protected void NavigateTo(Vector3 position)
         {
             Controller.SetTrigger("Walk");
             Navigator.MoveTo(position, WaitInPlace);
         }
 
-        void WaitInPlace() => StartCoroutine(WaitThenMove());
-        
-        IEnumerator WaitThenMove()
+        protected void WaitInPlace() => StartCoroutine(WaitThenMove());
+
+        protected virtual IEnumerator WaitThenMove()
         {
             Navigator.Stop();
             Controller.SetTrigger("Stop");
@@ -41,6 +47,33 @@ namespace AI
         }
 
         public void Spook()
+        {
+            SpookPoints -= 1;
+
+            if (SpookPoints <= 0)
+                EscapeHouse();
+            else
+                RunAway();
+        }
+
+        protected void EscapeHouse()
+        {
+            SpookVfx.PlayVfx();
+            Controller.SetTrigger("Run");
+            Navigator.RunTo(outside.position, AbandonHouse);
+        }
+
+        protected virtual void AbandonHouse()
+        {
+            if(IsLocal)
+                game.LocalSpooked();
+            else
+                game.VisitorSpooked();
+
+            gameObject.SetActive(false);
+        }
+
+        protected void RunAway()
         {
             SpookVfx.PlayVfx();
             Controller.SetTrigger("Run");

@@ -17,6 +17,7 @@ namespace Items
         public AuraHandler Auras;
         public GhostProximity GhostProximityDetector;
 
+        ExorcistHandler exorcistHandler;
         private ActorRepository actors;
         private bool isUsable = true;
 
@@ -26,12 +27,13 @@ namespace Items
         void Start()
         {
             actors = FindObjectOfType<ActorRepository>();
+            exorcistHandler = FindObjectOfType<ExorcistHandler>();
             GhostProximityDetector.Initialize(EffectRange, ActivationRange, actors, Auras);
         }
 
         private void OnMouseDown()
         {
-            if (isUsable && GhostIsInRange)
+            if (enabled && isUsable && GhostIsInRange)
             {
                 isUsable = false;
                 SpookNPCs(actors.GetNPCsInRadius(transform.position, EffectRange));
@@ -39,6 +41,7 @@ namespace Items
                     e.PlayEffect();
 
                 Auras.HideUseAura();
+                exorcistHandler.CallExorcist(this);
                 StartCoroutine(WaitForCooldown());
             }
         }
@@ -59,6 +62,13 @@ namespace Items
         {
             Auras.ShowUseAura();
             isUsable = true;
+        }
+
+        public void Exorcise()
+        {
+            Auras.HideUseAura();
+            Auras.HideAreaOfEffect();
+            enabled = false;
         }
     }
 }

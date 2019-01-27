@@ -195,6 +195,21 @@ PrefabInstance:
       propertyPath: FamilyNpcSpawnPoints
       value: 
       objectReference: {fileID: 663795141}
+    - target: {fileID: 7663974703778163094, guid: 345e66c4d4b31de4aa7c45f71c329b1b,
+        type: 3}
+      propertyPath: Game
+      value: 
+      objectReference: {fileID: 245166437}
+    - target: {fileID: 7663974703778163094, guid: 345e66c4d4b31de4aa7c45f71c329b1b,
+        type: 3}
+      propertyPath: LocalMembers
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663974703778163094, guid: 345e66c4d4b31de4aa7c45f71c329b1b,
+        type: 3}
+      propertyPath: Visitors
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 345e66c4d4b31de4aa7c45f71c329b1b, type: 3}
 --- !u!1 &101463991
@@ -345,6 +360,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8913d40feaf9f2b419978cd50106d9b7, type: 3}
+--- !u!1 &245166434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6401414419006711366, guid: 8913d40feaf9f2b419978cd50106d9b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 220220939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &245166437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245166434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0e6e194c0e08944a38ba14469f7aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &258435888
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,13 +559,38 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006104155}
-  m_LocalRotation: {x: 0.4964001, y: 0.32275194, z: -0.20561564, w: 0.77919215}
+  m_LocalRotation: {x: 0.42660013, y: 0.33944437, z: -0.17670354, w: 0.8194912}
   m_LocalPosition: {x: -5, y: 10, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1133556213}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 65, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 55, y: 45, z: 0}
+--- !u!1 &2072071438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7663974703778163092, guid: 345e66c4d4b31de4aa7c45f71c329b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 39960413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2072071441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072071438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa28553bac3e6f47886b07bc8784e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExorcistChance: 65
+  InvaderSpawnPoint: {fileID: 6132531015036472636}
+  ExorcistPrefab: {fileID: 5301046260489150724, guid: c1d7230184ebed9428eec56db5a01b0e,
+    type: 3}
+  NavigationPoints: {fileID: 6132531015036472635}
+  ActorRepository: {fileID: 0}
+  NPCContainer: {fileID: 0}
 --- !u!1001 &6132531015036472634
 PrefabInstance:
   m_ObjectHideFlags: 0

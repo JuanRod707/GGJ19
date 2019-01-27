@@ -1,7 +1,7 @@
 ﻿using Movement;
 using UnityEngine;
 
-namespace PlayerInput
+namespace Player
 {
     public class PlayerInput : MonoBehaviour
     {
