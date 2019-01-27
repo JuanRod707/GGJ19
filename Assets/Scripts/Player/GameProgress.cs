@@ -5,10 +5,12 @@ namespace Player
 {
     public class GameProgress : MonoBehaviour
     {
+        public float TimeLimit;
         public InGamePanels UiController;
 
         private int spookedVisitors;
         private int visitorCount;
+        private float remainingTime;
 
         public void SetVisitorCount(int count) => visitorCount = count;
 
@@ -20,8 +22,26 @@ namespace Player
                 WinGame();
         }
 
-        public void LocalSpooked() => UiController.GameEnded("You Lose");
+        public void LocalSpooked() => LoseGame();
+
+        private void LoseGame() => UiController.GameEnded("You Lose");
 
         private void WinGame() => UiController.GameEnded("You Win");
+
+        private void Start()
+        {
+            remainingTime = TimeLimit;
+        }
+
+        private void Update()
+        {
+            if (remainingTime > 0)
+            {
+                remainingTime -= Time.deltaTime;
+                UiController.UpdateTimer(remainingTime);
+                if (remainingTime <= 0)
+                    LoseGame();
+            }
+        }
     }
 }

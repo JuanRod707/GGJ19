@@ -9,6 +9,7 @@ namespace UI
         public Text EndMessage;
         public Transform ScorePanel;
         public GameObject ScoreTokenPrefab;
+        public Text Timer;
 
         public void AddScore() => Instantiate(ScoreTokenPrefab, ScorePanel);
 
@@ -17,5 +18,7 @@ namespace UI
             EndMessage.text = message;
             EndPanel.SetActive(true);
         }
+
+        public void UpdateTimer(float time) => Timer.text = time.ToString("0");
     }
 }
