@@ -34,11 +34,7 @@ namespace AI
             Navigator.MoveTo(targetItem.transform.position, PerformExorcism);
         }
 
-        private void PerformExorcism()
-        {
-            targetItem.Exorcise();
-            StartCoroutine(PerformExorcismAndLeave());
-        }
+        private void PerformExorcism() => StartCoroutine(PerformExorcismAndLeave());
 
         protected override IEnumerator WaitThenMove()
         {
@@ -55,6 +51,7 @@ namespace AI
             ExorcismSfx.Play();
             yield return new WaitForSeconds(ExorcismTime);
             exorcismSuccessful = true;
+            targetItem.Exorcise();
             GraciouslyExitHouse();
         }
 
