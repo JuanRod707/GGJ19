@@ -11,6 +11,7 @@ namespace Player
         private int spookedVisitors;
         private int visitorCount;
         private float remainingTime;
+        private bool gameOver;
 
         public void SetVisitorCount(int count) => visitorCount = count;
 
@@ -24,9 +25,17 @@ namespace Player
 
         public void LocalSpooked() => LoseGame();
 
-        private void LoseGame() => UiController.GameEnded("You Lose");
+        private void LoseGame()
+        {
+            gameOver = true;
+            UiController.GameEnded(false);
+        }
 
-        private void WinGame() => UiController.GameEnded("You Win");
+        private void WinGame()
+        {
+            gameOver = true;
+            UiController.GameEnded(true);
+        }
 
         private void Start()
         {
@@ -35,7 +44,7 @@ namespace Player
 
         private void Update()
         {
-            if (remainingTime > 0)
+            if (!gameOver && remainingTime > 0)
             {
                 remainingTime -= Time.deltaTime;
                 UiController.UpdateTimer(remainingTime);
