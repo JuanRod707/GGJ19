@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using AI;
 using Effects;
 using Repositories;
@@ -11,9 +12,12 @@ namespace Items
         public float ActivationRange;
         public float EffectRange;
         public float Cooldown;
+
         public SpookEffect[] Effects;
+        public AuraHandler Auras;
 
         private ActorRepository actors;
+        private bool isUsable = true;
 
         private bool GhostIsInRange => 
             Vector3.Distance(transform.position, actors.PlayerGhost.transform.position) < ActivationRange;
@@ -22,11 +26,15 @@ namespace Items
 
         private void OnMouseDown()
         {
-            if (GhostIsInRange)
+            if (isUsable && GhostIsInRange)
             {
+                isUsable = false;
                 SpookNPCs(actors.GetNPCsInRadius(transform.position, EffectRange));
                 foreach(var e in Effects)
                     e.PlayEffect();
+
+                Auras.HideUseAura();
+                StartCoroutine(WaitForCooldown());
             }
         }
 
@@ -34,6 +42,18 @@ namespace Items
         {
             foreach (var npc in npcs)
                 npc.Spook();
+        }
+
+        IEnumerator WaitForCooldown()
+        {
+            yield return new WaitForSeconds(Cooldown);
+            ResetItem();
+        }
+
+        private void ResetItem()
+        {
+            Auras.ShowUseAura();
+            isUsable = true;
         }
     }
 }
