@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 6957850139410685177}
   - component: {fileID: 6957850139410685158}
   - component: {fileID: 6957850139410685159}
+  - component: {fileID: 286169155794347088}
   m_Layer: 0
   m_Name: Behaviour
   m_TagString: Untagged
@@ -366,13 +367,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cddba23727600254cbf6653b40b69f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActivationRange: 6
-  EffectRange: 12
+  ActivationRange: 5
+  EffectRange: 6
   Cooldown: 5
   Effects:
   - {fileID: 4177645500483022932}
   - {fileID: 5428354292182424056}
   Auras: {fileID: 3739032909850690425}
+  GhostProximityDetector: {fileID: 286169155794347088}
+--- !u!114 &286169155794347088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6957850139410685176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5979b692843e68c469ba1e6e0ec26a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2228096614280854078
 PrefabInstance:
   m_ObjectHideFlags: 0

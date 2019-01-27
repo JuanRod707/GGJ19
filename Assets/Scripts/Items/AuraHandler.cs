@@ -6,16 +6,26 @@ namespace Items
     {
         public ParticleSystem AuraReady;
         public ParticleSystem AuraEffect;
+        public ParticleSystem AuraEffectContinuous;
         public float EffectRangeMultiplier;
 
-        public void HideUseAura() => AuraReady.Stop();
+        public void HideUseAura()
+        {
+            AuraReady.Stop();
+            HideAreaOfEffect();
+        }
 
         public void ShowUseAura() => AuraReady.Play();
 
+        public bool IsOnCooldown => AuraReady.isStopped;
+
         public void ShowAreaOfEffect(float range)
         {
-            var part = AuraEffect.main;
-            part.startSize = range * EffectRangeMultiplier;
+            var mainStart = AuraEffect.main;
+            var mainContinuous = AuraEffectContinuous.main;
+
+            mainStart.startSize = range * EffectRangeMultiplier;
+            mainContinuous.startSize = range * EffectRangeMultiplier;
             AuraEffect.Play();
         }
 

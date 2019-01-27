@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2356709879106432182}
   - component: {fileID: 2356709879106432169}
   - component: {fileID: 2356709879106432168}
+  - component: {fileID: 358548121273482558}
   m_Layer: 0
   m_Name: Behaviour
   m_TagString: Untagged
@@ -58,12 +59,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivationRange: 6
-  EffectRange: 10
-  Cooldown: 5
+  EffectRange: 4
+  Cooldown: 8
   Effects:
   - {fileID: 2356709880882719982}
   - {fileID: 2873306333525911532}
   Auras: {fileID: 2300591191820792789}
+  GhostProximityDetector: {fileID: 358548121273482558}
+--- !u!114 &358548121273482558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2356709879106432183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5979b692843e68c469ba1e6e0ec26a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2356709879252230625
 GameObject:
   m_ObjectHideFlags: 0

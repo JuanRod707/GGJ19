@@ -15,6 +15,7 @@ namespace Items
 
         public SpookEffect[] Effects;
         public AuraHandler Auras;
+        public GhostProximity GhostProximityDetector;
 
         private ActorRepository actors;
         private bool isUsable = true;
@@ -22,7 +23,11 @@ namespace Items
         private bool GhostIsInRange => 
             Vector3.Distance(transform.position, actors.PlayerGhost.transform.position) < ActivationRange;
 
-        void Start() => actors = FindObjectOfType<ActorRepository>();
+        void Start()
+        {
+            actors = FindObjectOfType<ActorRepository>();
+            GhostProximityDetector.Initialize(EffectRange, ActivationRange, actors, Auras);
+        }
 
         private void OnMouseDown()
         {
