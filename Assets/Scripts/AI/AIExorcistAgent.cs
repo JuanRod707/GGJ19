@@ -8,10 +8,14 @@ namespace AI
 {
     public class AIExorcistAgent : AIAgent
     {
+        public float ExorcismTime;
+        public AudioSource ArriveSfx;
+        public AudioSource ExorcismSfx;
+
         private SpookItem targetItem;
         private bool exorcismSuccessful;
         private Action exitCallback;
-
+        
         public void Initialize(TransformRepository navigationSpots, Transform outside, SpookItem targetItem, Action exitCallback)
         {
             this.exitCallback = exitCallback;
@@ -20,6 +24,8 @@ namespace AI
             this.targetItem = targetItem;
 
             GoToTarget();
+
+            ArriveSfx.Play();
         }
 
         private void GoToTarget()
@@ -31,8 +37,7 @@ namespace AI
         private void PerformExorcism()
         {
             targetItem.Exorcise();
-            exorcismSuccessful = true;
-            GraciouslyExitHouse();
+            StartCoroutine(PerformExorcismAndLeave());
         }
 
         protected override IEnumerator WaitThenMove()
@@ -41,6 +46,16 @@ namespace AI
             Controller.SetTrigger("Stop");
             yield return new WaitForSeconds(RandomWaitTime);
             ResumeTask();
+        }
+
+        IEnumerator PerformExorcismAndLeave()
+        {
+            Navigator.Stop();
+            Controller.SetTrigger("Stop");
+            ExorcismSfx.Play();
+            yield return new WaitForSeconds(ExorcismTime);
+            exorcismSuccessful = true;
+            GraciouslyExitHouse();
         }
 
         private void ResumeTask()
