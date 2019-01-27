@@ -2,10 +2,10 @@
 
 namespace Effects
 {
-    public class VfxPlay : MonoBehaviour
+    public class VfxPlay : SpookEffect
     {
         public ParticleSystem Vfx;
 
-        public void PlayVfx() => Vfx.Play();
+        public override void PlayEffect() => Vfx.Play();
     }
 }

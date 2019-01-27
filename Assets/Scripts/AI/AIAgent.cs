@@ -58,7 +58,7 @@ namespace AI
 
         protected void EscapeHouse()
         {
-            SpookVfx.PlayVfx();
+            SpookVfx.PlayEffect();
             Controller.SetTrigger("Run");
             Navigator.RunTo(outside.position, AbandonHouse);
         }
@@ -75,7 +75,7 @@ namespace AI
 
         protected void RunAway()
         {
-            SpookVfx.PlayVfx();
+            SpookVfx.PlayEffect();
             Controller.SetTrigger("Run");
             Navigator.RunTo(navigationSpots.GetFurthest(transform.position).position, WaitInPlace);
         }

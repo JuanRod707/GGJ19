@@ -152,6 +152,7 @@ MonoBehaviour:
   SpookVfx: {fileID: 1941160104076154100}
   Controller: {fileID: 1461647655344551763}
   SpookPoints: 2
+  IsLocal: 0
 --- !u!1 &6762734430064780413
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +353,7 @@ PrefabInstance:
     - target: {fileID: 13700002, guid: 701e0d249986eeb42b4c234a8c0e145d, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: b46abc6936dab4046905a4af1efbc518, type: 2}
+      objectReference: {fileID: 2100000, guid: 8b0eaa1abf45e044b81c50abd4c0ddf7, type: 2}
     - target: {fileID: 13700002, guid: 701e0d249986eeb42b4c234a8c0e145d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

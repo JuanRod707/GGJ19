@@ -408,6 +408,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &308025320 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7663974702831890184, guid: 345e66c4d4b31de4aa7c45f71c329b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 39960413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &663795141 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 797446844483285568, guid: 348bb71836041864b8dc0888da5c55aa,
@@ -484,6 +490,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 39960413}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1865547346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1865547347, guid: 345e66c4d4b31de4aa7c45f71c329b1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 39960413}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4abd664d2a4cc6bc07ab3c6ab436e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006104155
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,8 +607,8 @@ MonoBehaviour:
   ExorcistPrefab: {fileID: 5301046260489150724, guid: c1d7230184ebed9428eec56db5a01b0e,
     type: 3}
   NavigationPoints: {fileID: 6132531015036472635}
-  ActorRepository: {fileID: 0}
-  NPCContainer: {fileID: 0}
+  ActorRepository: {fileID: 1865547346}
+  NPCContainer: {fileID: 308025320}
 --- !u!1001 &6132531015036472634
 PrefabInstance:
   m_ObjectHideFlags: 0
