@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7663974703778163093}
   - component: {fileID: 7663974703778163094}
+  - component: {fileID: 2072071441}
   m_Layer: 0
   m_Name: NPCGenerator
   m_TagString: Untagged
@@ -73,6 +74,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f969146864410f04cabfd578ef531847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinLocals: 2
+  MaxLocals: 3
+  MinVisitors: 3
+  MaxVisitors: 6
   InvaderPrefabs:
   - {fileID: 4489534411262261394, guid: 1763a8dd8effeda4e9f2b57a4d238d48, type: 3}
   - {fileID: 301999066072689025, guid: 57ac594a987d77546a68d5619aae5192, type: 3}
@@ -83,8 +88,28 @@ MonoBehaviour:
   - {fileID: 4489534411262261394, guid: 6cfcdfe06601e2a428da904e9a464962, type: 3}
   FamilyNpcSpawnPoints: {fileID: 0}
   InvaderSpawnPoint: {fileID: 0}
+  Game: {fileID: 0}
   ActorRepository: {fileID: 1865547347}
   NavigationSpots: {fileID: 0}
+  NPCContainer: {fileID: 7663974702831890184}
+--- !u!114 &2072071441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663974703778163092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa28553bac3e6f47886b07bc8784e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExorcistChance: 65
+  InvaderSpawnPoint: {fileID: 0}
+  ExorcistPrefab: {fileID: 5301046260489150724, guid: c1d7230184ebed9428eec56db5a01b0e,
+    type: 3}
+  NavigationPoints: {fileID: 0}
+  ActorRepository: {fileID: 1865547347}
   NPCContainer: {fileID: 7663974702831890184}
 --- !u!1 &7663974704808676348
 GameObject:

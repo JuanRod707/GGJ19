@@ -16,6 +16,7 @@ namespace AI
         public Animator Controller;
         public int SpookPoints;
         public bool IsLocal;
+        public AudioSource SpookSfx;
 
         protected TransformRepository navigationSpots;
         protected Transform outside;
@@ -49,6 +50,8 @@ namespace AI
         public void Spook()
         {
             SpookPoints -= 1;
+            SpookVfx.PlayEffect();
+            SpookSfx.Play();
 
             if (SpookPoints <= 0)
                 EscapeHouse();
@@ -58,7 +61,6 @@ namespace AI
 
         protected void EscapeHouse()
         {
-            SpookVfx.PlayEffect();
             Controller.SetTrigger("Run");
             Navigator.RunTo(outside.position, AbandonHouse);
         }
@@ -75,7 +77,6 @@ namespace AI
 
         protected void RunAway()
         {
-            SpookVfx.PlayEffect();
             Controller.SetTrigger("Run");
             Navigator.RunTo(navigationSpots.GetFurthest(transform.position).position, WaitInPlace);
         }

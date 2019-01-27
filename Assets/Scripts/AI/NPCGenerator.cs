@@ -8,8 +8,10 @@ namespace AI
 {
     public class NPCGenerator : MonoBehaviour
     {
-        public int LocalMembers;
-        public int Visitors;
+        public int MinLocals;
+        public int MaxLocals;
+        public int MinVisitors;
+        public int MaxVisitors;
 
         public AIAgent[] InvaderPrefabs;
         public AIAgent[] FamilyPrefabs;
@@ -23,13 +25,16 @@ namespace AI
         
         void Start()
         {
-            foreach (var _ in Enumerable.Range(0, LocalMembers))
+            var locals = Random.Range(MinLocals, MaxLocals + 1);
+            var visitors = Random.Range(MinVisitors, MaxVisitors + 1);
+
+            foreach (var _ in Enumerable.Range(0, locals))
                 AddFamily();
 
-            foreach (var _ in Enumerable.Range(0, Visitors))
+            foreach (var _ in Enumerable.Range(0, visitors))
                 AddInvader();
 
-            Game.SetVisitorCount(Visitors);
+            Game.SetVisitorCount(visitors);
         }
 
         void AddInvader()
