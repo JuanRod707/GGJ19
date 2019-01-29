@@ -136,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8223461140407304857}
   m_Layer: 0
-  m_Name: Stove
+  m_Name: Fireplace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,12 +198,12 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6289010431671162515}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9056604, g: 0.7669588, b: 0.15806337, a: 1}
-  m_Intensity: 2
-  m_Range: 3
+  m_Intensity: 4
+  m_Range: 4
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -241,9 +241,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ea2cb47f224f21b864d40bb0a5b653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlickInterlude: 0.1
+  FlickInterlude: 0.12
   FlickAmount: 8
-  Light: {fileID: 1661664303889599269}
+  ReducedRange: 3
+  Lights:
+  - {fileID: 1661664303889599269}
 --- !u!1 &7052716616793747716
 GameObject:
   m_ObjectHideFlags: 0
@@ -5268,11 +5270,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8223461140407304857}
     m_Modifications:
-    - target: {fileID: 4651523575864623724, guid: cc1894fdc89dfd8428ad5a5032cb9fd8,
-        type: 3}
-      propertyPath: m_Name
-      value: Aura
-      objectReference: {fileID: 0}
     - target: {fileID: 2927093363565220691, guid: cc1894fdc89dfd8428ad5a5032cb9fd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5327,6 +5324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4651523575864623724, guid: cc1894fdc89dfd8428ad5a5032cb9fd8,
+        type: 3}
+      propertyPath: m_Name
+      value: Aura
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc1894fdc89dfd8428ad5a5032cb9fd8, type: 3}

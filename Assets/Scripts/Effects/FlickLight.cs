@@ -8,13 +8,19 @@ namespace Effects
     {
         public float FlickInterlude;
         public int FlickAmount;
-        public Light Light;
+        public float ReducedRange;
 
+        public Light[] Lights;
+
+        private bool isOnByDefault;
         private float basicRange;
+
+        void Start() => isOnByDefault = Lights.First().enabled;
 
         public override void PlayEffect()
         {
-            basicRange = Light.range;
+            SetLights(true);
+            basicRange = Lights.First().range;
             StartCoroutine(Flick());
         }
 
@@ -22,11 +28,29 @@ namespace Effects
         {
             foreach (var _ in Enumerable.Range(0, FlickAmount))
             {
-                Light.range = 0f;
+                SetLightRanges(ReducedRange);
                 yield return new WaitForSeconds(FlickInterlude);
 
-                Light.range = basicRange;
+                SetLightRanges(basicRange);
                 yield return new WaitForSeconds(FlickInterlude);
+            }
+
+            SetLights(isOnByDefault);
+        }
+
+        void SetLightRanges(float range)
+        {
+            foreach (var light in Lights)
+            {
+                light.range = range;
+            }
+        }
+
+        void SetLights(bool on)
+        {
+            foreach (var light in Lights)
+            {
+                light.enabled = on;
             }
         }
     }

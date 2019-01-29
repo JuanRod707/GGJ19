@@ -14,7 +14,7 @@ namespace AI
         public ScheduledNavigator Navigator;
         public VfxPlay SpookVfx;
         public Animator Controller;
-        public int SpookPoints;
+        public int InitialSpookPoints;
         public bool IsLocal;
         public AudioSource SpookSfx;
 
@@ -22,6 +22,7 @@ namespace AI
         protected Transform outside;
         protected float RandomWaitTime => Random.Range(MinIdleTime, MaxIdleTime);
         protected GameProgress game;
+        protected int currentSpookPoints;
 
         public void Initialize(GameProgress game, TransformRepository navigationSpots, Transform outside)
         {
@@ -29,6 +30,7 @@ namespace AI
             NavigateTo(navigationSpots.GetRandomSpot.position);
             this.outside = outside;
             this.game = game;
+            currentSpookPoints = InitialSpookPoints;
         }
 
         protected void NavigateTo(Vector3 position)
@@ -49,11 +51,11 @@ namespace AI
 
         public void Spook()
         {
-            SpookPoints -= 1;
+            currentSpookPoints -= 1;
             SpookVfx.PlayEffect();
             SpookSfx.Play();
 
-            if (SpookPoints <= 0)
+            if (currentSpookPoints <= 0)
                 EscapeHouse();
             else
                 RunAway();
