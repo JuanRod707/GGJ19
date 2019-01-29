@@ -9,7 +9,7 @@ namespace Movement
 
         private float angle;
 
-        void Update()
+        void FixedUpdate()
         {
             var pos = transform.localPosition;
             pos.y += Mathf.Sin(angle) * Strength;
