@@ -29,6 +29,13 @@ namespace Items
             AuraEffect.Play();
         }
 
+        public void Disable()
+        {
+            HideAreaOfEffect();
+            HideUseAura();
+            gameObject.SetActive(false);
+        }
+
         public void HideAreaOfEffect() => AuraEffect.Stop();
     }
 }

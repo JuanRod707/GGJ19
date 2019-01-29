@@ -66,8 +66,7 @@ namespace Items
 
         public void Exorcise()
         {
-            Auras.HideUseAura();
-            Auras.HideAreaOfEffect();
+            Auras.Disable();
             enabled = false;
         }
     }
