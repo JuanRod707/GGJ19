@@ -22,6 +22,7 @@ namespace AI
             this.navigationSpots = navigationSpots;
             this.outside = outside;
             this.targetItem = targetItem;
+            currentSpookPoints = InitialSpookPoints;
 
             GoToTarget();
 
@@ -73,6 +74,12 @@ namespace AI
         {
            exitCallback();
            gameObject.SetActive(false);
+        }
+
+        public override void Spook()
+        {
+            base.Spook();
+            StopAllCoroutines();
         }
     }
 }

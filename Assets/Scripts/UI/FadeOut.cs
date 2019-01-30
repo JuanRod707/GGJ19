@@ -24,6 +24,9 @@ namespace UI
 
         void Update()
         {
+            if (Input.anyKey)
+                fadeOut = true;
+
             if (fadeOut)
                 Canvas.alpha -= FadeSpeed;
 

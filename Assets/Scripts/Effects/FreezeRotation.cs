@@ -5,10 +5,12 @@ namespace Effects
 {
     public class FreezeRotation : MonoBehaviour
     {
+        public float AngleFreeze;
+
         void Update()
         {
             var rotVector = transform.eulerAngles;
-            rotVector.y = 0;
+            rotVector.y = AngleFreeze;
             transform.eulerAngles = rotVector;
         }
     }

@@ -16,6 +16,7 @@ namespace Items
         public SpookEffect[] Effects;
         public AuraHandler Auras;
         public GhostProximity GhostProximityDetector;
+        public ParticleSystem ExorcismVfx;
 
         ExorcistHandler exorcistHandler;
         private ActorRepository actors;
@@ -67,6 +68,7 @@ namespace Items
         public void Exorcise()
         {
             Auras.Disable();
+            ExorcismVfx.Play();
             enabled = false;
         }
     }

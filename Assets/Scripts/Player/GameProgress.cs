@@ -5,7 +5,9 @@ namespace Player
 {
     public class GameProgress : MonoBehaviour
     {
-        public float TimeLimit;
+        public float TimeLimitBase;
+        public float TimePerVisitor;
+
         public InGamePanels UiController;
 
         private int spookedVisitors;
@@ -13,7 +15,11 @@ namespace Player
         private float remainingTime;
         private bool gameOver;
 
-        public void SetVisitorCount(int count) => visitorCount = count;
+        public void SetVisitorCount(int count)
+        {
+            visitorCount = count;
+            remainingTime = TimeLimitBase + (visitorCount * TimePerVisitor);
+        }
 
         public void VisitorSpooked()
         {
@@ -35,11 +41,6 @@ namespace Player
         {
             gameOver = true;
             UiController.GameEnded(true);
-        }
-
-        private void Start()
-        {
-            remainingTime = TimeLimit;
         }
 
         private void Update()

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI
@@ -22,6 +23,9 @@ namespace UI
             EndArt.sprite = win ? WinSprite : LoseSprite;
         }
 
-        public void UpdateTimer(float time) => Timer.text = time.ToString("0");
+        public void UpdateTimer(float time)
+        {
+            Timer.text = time > 60 ? new DateTime().AddSeconds(time).ToString("M:ss") : $"0:{time:00}";
+        }
     }
 }

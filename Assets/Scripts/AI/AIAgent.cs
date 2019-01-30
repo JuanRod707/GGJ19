@@ -49,7 +49,7 @@ namespace AI
             NavigateTo(navigationSpots.GetRandomSpot.position);
         }
 
-        public void Spook()
+        public virtual void Spook()
         {
             currentSpookPoints -= 1;
             SpookVfx.PlayEffect();
