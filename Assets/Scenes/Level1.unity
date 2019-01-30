@@ -934,6 +934,7 @@ GameObject:
   - component: {fileID: 904465145}
   - component: {fileID: 904465150}
   - component: {fileID: 904465149}
+  - component: {fileID: 904465151}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1057,6 +1058,19 @@ MonoBehaviour:
   ScoreTokenPrefab: {fileID: 943685512815296829, guid: 071882130791cac4a9bb2e0db9ec3064,
     type: 3}
   Timer: {fileID: 108372184}
+--- !u!114 &904465151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904465144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a76c0d7fe8c6c489aae346ccdbb451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EscapeAction: 0
 --- !u!1 &1133556211
 GameObject:
   m_ObjectHideFlags: 0
