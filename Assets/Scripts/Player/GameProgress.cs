@@ -24,7 +24,7 @@ namespace Player
         public void VisitorSpooked()
         {
             spookedVisitors++;
-            UiController.AddScore();
+            //UiController.AddScore();
             if (spookedVisitors >= visitorCount)
                 WinGame();
         }

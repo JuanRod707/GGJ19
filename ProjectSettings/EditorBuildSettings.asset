@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 155a48691b7eb2e45bc7c7fde1d230e7
   - enabled: 1
-    path: Assets/Scenes/Poem.unity
+    path: Assets/Scenes/Interlude.unity
     guid: 4f6951f85d7defb48b0227f905c341bd
   - enabled: 1
     path: Assets/Scenes/Level1.unity

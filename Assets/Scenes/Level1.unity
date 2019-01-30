@@ -670,8 +670,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0e6e194c0e08944a38ba14469f7aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLimitBase: 20
-  TimePerVisitor: 20
+  TimeLimitBase: 30
+  TimePerVisitor: 18
   UiController: {fileID: 904465150}
 --- !u!1 &306683433
 GameObject:
