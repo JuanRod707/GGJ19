@@ -1,4 +1,5 @@
-﻿using Helpers;
+﻿using System;
+using Helpers;
 using Items;
 using Movement;
 using UnityEngine;
@@ -27,14 +28,30 @@ namespace Player
             {
                 var item = hit.collider.GetComponent<SpookItem>();
 
-                if (!IsInRange(item))
+                if (IsItem(item))
                 {
-                    ControlledNavigator.MoveTo(hit.point);
-                    MoveMarker.DisplayMarker(hit.point);
+                    if (!IsInRange(item))
+                        MoveToPoint(hit.point, item);
                 }
+                else
+                    MoveToPoint(hit.point);
             }
         }
 
-        private bool IsInRange(SpookItem item) => item != null && item.GhostIsInRange;
+        private bool IsItem(SpookItem item) => item != null;
+
+        private bool IsInRange(SpookItem item) => item.GhostIsInRange;
+
+        private void MoveToPoint(Vector3 target)
+        {
+            ControlledNavigator.MoveTo(target);
+            MoveMarker.DisplayMarker(target);
+        }
+
+        private void MoveToPoint(Vector3 target, SpookItem targetItem)
+        {
+            ControlledNavigator.MoveTo(target, targetItem);
+            MoveMarker.DisplayMarker(target);
+        }
     }
 }

@@ -4,6 +4,7 @@ using AI;
 using Effects;
 using Repositories;
 using UnityEngine;
+using UnityEngine.WSA;
 
 namespace Items
 {
@@ -34,17 +35,8 @@ namespace Items
 
         private void OnMouseDown()
         {
-            if (enabled && isUsable && GhostIsInRange)
-            {
-                isUsable = false;
-                SpookNPCs(actors.GetNPCsInRadius(transform.position, EffectRange));
-                foreach(var e in Effects)
-                    e.PlayEffect();
-
-                Auras.HideUseAura();
-                exorcistHandler.CallExorcist(this);
-                StartCoroutine(WaitForCooldown());
-            }
+            if(GhostIsInRange)
+                Activate();
         }
 
         private void SpookNPCs(IEnumerable<AIAgent> npcs)
@@ -70,6 +62,21 @@ namespace Items
             Auras.Disable();
             ExorcismVfx.Play();
             enabled = false;
+        }
+
+        public void Activate()
+        {
+            if (enabled && isUsable)
+            {
+                isUsable = false;
+                SpookNPCs(actors.GetNPCsInRadius(transform.position, EffectRange));
+                foreach (var e in Effects)
+                    e.PlayEffect();
+
+                Auras.HideUseAura();
+                exorcistHandler.CallExorcist(this);
+                StartCoroutine(WaitForCooldown());
+            }
         }
     }
 }
