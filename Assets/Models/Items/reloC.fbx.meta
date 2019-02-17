@@ -1,42 +1,49 @@
 fileFormatVersion: 2
-guid: e15e6539c695f1f448932afdce5428ee
+guid: e26252799c44ae846a3485d93c545d67
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: estufa_geo
-    100004: madera_1_geo
-    100006: madera_2_geo
-    100008: madera_3_geo
-    100010: madera_4_geo
-    100012: madera_5_geo
-    400000: //RootNode
-    400002: estufa_geo
-    400004: madera_1_geo
-    400006: madera_2_geo
-    400008: madera_3_geo
-    400010: madera_4_geo
-    400012: madera_5_geo
-    2100000: lambert1
-    2100002: maderaM
-    2300000: estufa_geo
-    2300002: madera_1_geo
-    2300004: madera_2_geo
-    2300006: madera_3_geo
-    2300008: madera_4_geo
-    2300010: madera_5_geo
-    3300000: estufa_geo
-    3300002: madera_1_geo
-    3300004: madera_2_geo
-    3300006: madera_3_geo
-    3300008: madera_4_geo
-    3300010: madera_5_geo
-    4300000: estufa_geo
-    4300002: madera_1_geo
-    4300004: madera_2_geo
-    4300006: madera_3_geo
-    4300008: madera_4_geo
-    4300010: madera_5_geo
+    100000: agujaCentro_geo
+    100002: agujachica_geo
+    100004: agujagrande_geo
+    100006: //RootNode
+    100008: reloj_geo
+    100010: reloj_pendulo01_geo
+    100012: reloj_pendulo2_geo
+    100014: relojMadera_geo
+    400000: agujaCentro_geo
+    400002: agujachica_geo
+    400004: agujagrande_geo
+    400006: //RootNode
+    400008: reloj_geo
+    400010: reloj_pendulo01_geo
+    400012: reloj_pendulo2_geo
+    400014: relojMadera_geo
+    2100000: relojMaderaM
+    2100002: penduloM
+    2100004: relojBlancoM
+    2100006: AgujasM
+    2300000: agujaCentro_geo
+    2300002: agujachica_geo
+    2300004: agujagrande_geo
+    2300006: reloj_geo
+    2300008: reloj_pendulo01_geo
+    2300010: reloj_pendulo2_geo
+    2300012: relojMadera_geo
+    3300000: agujaCentro_geo
+    3300002: agujachica_geo
+    3300004: agujagrande_geo
+    3300006: reloj_geo
+    3300008: reloj_pendulo01_geo
+    3300010: reloj_pendulo2_geo
+    3300012: relojMadera_geo
+    4300000: relojMadera_geo
+    4300002: reloj_pendulo01_geo
+    4300004: reloj_pendulo2_geo
+    4300006: reloj_geo
+    4300008: agujagrande_geo
+    4300010: agujachica_geo
+    4300012: agujaCentro_geo
   externalObjects: {}
   materials:
     importMaterials: 1

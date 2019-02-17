@@ -3,63 +3,25 @@ guid: ad94fa0dafb782c479857b0f6245e2e8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Bone002
-    100002: Bone003
-    100004: Bone004
-    100006: Bone005
-    100008: Circle003
-    100010: Cone001
-    100012: Cone002
-    100014: Cylinder001
-    100016: //RootNode
-    100018: Line001
-    100020: Sphere001
-    100022: Torus001
-    100024: Torus002
-    100026: Torus003
-    400000: Bone002
-    400002: Bone003
-    400004: Bone004
-    400006: Bone005
-    400008: Circle003
-    400010: Cone001
-    400012: Cone002
-    400014: Cylinder001
-    400016: //RootNode
-    400018: Line001
-    400020: Sphere001
-    400022: Torus001
-    400024: Torus002
-    400026: Torus003
-    2100000: bronce
-    2100002: pantallalampara
-    2100004: lamparita
-    2300000: Cone001
-    2300002: Cone002
-    2300004: Cylinder001
-    2300006: Line001
-    2300008: Sphere001
-    2300010: Torus001
-    2300012: Torus002
-    2300014: Torus003
-    3300000: Cone001
-    3300002: Cone002
-    3300004: Cylinder001
-    3300006: Line001
-    3300008: Sphere001
-    3300010: Torus001
-    3300012: Torus002
-    3300014: Torus003
-    4300000: Cylinder001
-    4300002: Line001
-    4300004: Torus001
-    4300006: Cone002
-    4300008: Torus003
-    4300010: Cone001
-    4300012: Torus002
-    4300014: Sphere001
-    7400000: Take 001
-    9500000: //RootNode
+    100000: //RootNode
+    100002: lamparaPantalla_geo
+    100004: lamparaPie_geo
+    100006: lamparaPierna_geo
+    400000: //RootNode
+    400002: lamparaPantalla_geo
+    400004: lamparaPie_geo
+    400006: lamparaPierna_geo
+    2100000: lamparaPieM
+    2100002: pantallaM
+    2300000: lamparaPantalla_geo
+    2300002: lamparaPie_geo
+    2300004: lamparaPierna_geo
+    3300000: lamparaPantalla_geo
+    3300002: lamparaPie_geo
+    3300004: lamparaPierna_geo
+    4300000: lamparaPie_geo
+    4300002: lamparaPierna_geo
+    4300004: lamparaPantalla_geo
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -112,8 +74,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.0254
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -140,7 +102,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
