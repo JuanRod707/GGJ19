@@ -1,4 +1,6 @@
-﻿using Movement;
+﻿using Helpers;
+using Items;
+using Movement;
 using UnityEngine;
 
 namespace Player
@@ -23,9 +25,16 @@ namespace Player
 
             if (Physics.Raycast(mouseRay, out hit, 200f, InteractableLayer))
             {
-                ControlledNavigator.MoveTo(hit.point);
-                MoveMarker.DisplayMarker(hit.point);
+                var item = hit.collider.GetComponent<SpookItem>();
+
+                if (!IsInRange(item))
+                {
+                    ControlledNavigator.MoveTo(hit.point);
+                    MoveMarker.DisplayMarker(hit.point);
+                }
             }
         }
+
+        private bool IsInRange(SpookItem item) => item != null && item.GhostIsInRange;
     }
 }

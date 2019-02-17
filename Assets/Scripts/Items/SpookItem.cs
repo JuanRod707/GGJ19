@@ -22,7 +22,7 @@ namespace Items
         private ActorRepository actors;
         private bool isUsable = true;
 
-        private bool GhostIsInRange => 
+        public bool GhostIsInRange => 
             Vector3.Distance(transform.position, actors.PlayerGhost.transform.position) < ActivationRange;
 
         void Start()
