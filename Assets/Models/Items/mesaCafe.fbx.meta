@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: 8e7cc008d82cc8549937d4fde2c1b759
+guid: e96c4de2a02b6594faeabf9b6fe5c94e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: mesa_geo
+    100002: //RootNode
+    400000: mesa_geo
+    400002: //RootNode
     2100000: maderaM
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: silla_geo
+    2300000: mesa_geo
+    3300000: mesa_geo
+    4300000: mesa_geo
   externalObjects: {}
   materials:
     importMaterials: 1

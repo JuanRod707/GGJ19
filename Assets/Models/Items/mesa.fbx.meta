@@ -1,42 +1,22 @@
 fileFormatVersion: 2
-guid: 826cfc72b1664ef46b3073902c5bef88
+guid: 28e60b9bd9894974d805b71ff8914cf0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Box001
-    100002: Box002
-    100004: Loft001
-    100006: Loft002
-    100008: Loft003
-    100010: Loft004
-    100012: //RootNode
-    400000: Box001
-    400002: Box002
-    400004: Loft001
-    400006: Loft002
-    400008: Loft003
-    400010: Loft004
-    400012: //RootNode
-    2100000: madera
-    2100002: No Name
-    2300000: Box001
-    2300002: Box002
-    2300004: Loft001
-    2300006: Loft002
-    2300008: Loft003
-    2300010: Loft004
-    3300000: Box001
-    3300002: Box002
-    3300004: Loft001
-    3300006: Loft002
-    3300008: Loft003
-    3300010: Loft004
-    4300000: Box001
-    4300002: Loft001
-    4300004: Loft002
-    4300006: Loft003
-    4300008: Loft004
-    4300010: Box002
+    100000: mantel_geo
+    100002: //RootNode
+    100004: mesa_geo
+    400000: mantel_geo
+    400002: //RootNode
+    400004: mesa_geo
+    2100000: mantelM
+    2100002: maderaM
+    2300000: mantel_geo
+    2300002: mesa_geo
+    3300000: mantel_geo
+    3300002: mesa_geo
+    4300000: mantel_geo
+    4300002: mesa_geo
   externalObjects: {}
   materials:
     importMaterials: 1
