@@ -3,39 +3,40 @@ guid: e15e6539c695f1f448932afdce5428ee
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Box001
-    100002: Cylinder001
-    100004: Cylinder002
-    100006: Cylinder003
-    100008: Cylinder004
-    100010: //RootNode
-    400000: Box001
-    400002: Cylinder001
-    400004: Cylinder002
-    400006: Cylinder003
-    400008: Cylinder004
-    400010: //RootNode
-    2100000: bronce
-    2100002: tierra
-    2100004: reloj
-    2100006: tapita
-    2100008: madera2
-    2100010: madera3
-    2300000: Box001
-    2300002: Cylinder001
-    2300004: Cylinder002
-    2300006: Cylinder003
-    2300008: Cylinder004
-    3300000: Box001
-    3300002: Cylinder001
-    3300004: Cylinder002
-    3300006: Cylinder003
-    3300008: Cylinder004
-    4300000: Box001
-    4300002: Cylinder001
-    4300004: Cylinder002
-    4300006: Cylinder003
-    4300008: Cylinder004
+    100000: //RootNode
+    100002: estufa_geo
+    100004: madera_1_geo
+    100006: madera_2_geo
+    100008: madera_3_geo
+    100010: madera_4_geo
+    100012: madera_5_geo
+    400000: //RootNode
+    400002: estufa_geo
+    400004: madera_1_geo
+    400006: madera_2_geo
+    400008: madera_3_geo
+    400010: madera_4_geo
+    400012: madera_5_geo
+    2100000: lambert1
+    2100002: maderaM
+    2300000: estufa_geo
+    2300002: madera_1_geo
+    2300004: madera_2_geo
+    2300006: madera_3_geo
+    2300008: madera_4_geo
+    2300010: madera_5_geo
+    3300000: estufa_geo
+    3300002: madera_1_geo
+    3300004: madera_2_geo
+    3300006: madera_3_geo
+    3300008: madera_4_geo
+    3300010: madera_5_geo
+    4300000: estufa_geo
+    4300002: madera_1_geo
+    4300004: madera_2_geo
+    4300006: madera_3_geo
+    4300008: madera_4_geo
+    4300010: madera_5_geo
   externalObjects: {}
   materials:
     importMaterials: 1

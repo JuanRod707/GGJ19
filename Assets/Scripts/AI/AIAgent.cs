@@ -12,7 +12,7 @@ namespace AI
         public float MinIdleTime;
         public float MaxIdleTime;
         public ScheduledNavigator Navigator;
-        public VfxPlay SpookVfx;
+        public ParticleEffect SpookVfx;
         public Animator Controller;
         public int InitialSpookPoints;
         public bool IsLocal;

@@ -3,35 +3,35 @@ guid: e67987f30547ed047a6a3bdac5d12b3f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Box001
-    100002: Box002
-    100004: Box003
-    100006: //RootNode
-    100008: Torus001
-    100010: Torus002
-    400000: Box001
-    400002: Box002
-    400004: Box003
-    400006: //RootNode
-    400008: Torus001
-    400010: Torus002
-    2100000: heladera
-    2100002: manija
-    2300000: Box001
-    2300002: Box002
-    2300004: Box003
-    2300006: Torus001
-    2300008: Torus002
-    3300000: Box001
-    3300002: Box002
-    3300004: Box003
-    3300006: Torus001
-    3300008: Torus002
-    4300000: Box001
-    4300002: Torus001
-    4300004: Box002
-    4300006: Box003
-    4300008: Torus002
+    100000: //RootNode
+    100002: heladeraCuerpo_geo
+    100004: manijaAbajo_geo
+    100006: manijaArriba_geo
+    100008: puertaAbajo_geo
+    100010: puertarriba_geo
+    400000: //RootNode
+    400002: heladeraCuerpo_geo
+    400004: manijaAbajo_geo
+    400006: manijaArriba_geo
+    400008: puertaAbajo_geo
+    400010: puertarriba_geo
+    2100000: blinn2
+    2100002: blinn1
+    2300000: heladeraCuerpo_geo
+    2300002: manijaAbajo_geo
+    2300004: manijaArriba_geo
+    2300006: puertaAbajo_geo
+    2300008: puertarriba_geo
+    3300000: heladeraCuerpo_geo
+    3300002: manijaAbajo_geo
+    3300004: manijaArriba_geo
+    3300006: puertaAbajo_geo
+    3300008: puertarriba_geo
+    4300000: heladeraCuerpo_geo
+    4300002: puertarriba_geo
+    4300004: puertaAbajo_geo
+    4300006: manijaAbajo_geo
+    4300008: manijaArriba_geo
   externalObjects: {}
   materials:
     importMaterials: 1
